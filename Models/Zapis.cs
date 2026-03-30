@@ -13,4 +13,8 @@ public sealed class Zapis
     public double? OcenaKoncowa { get; set; }
 
     public bool CzyAktywny { get; set; }
+
+    public override string ToString() =>
+        $"{Id} {StudentId} {PrzedmiotId} {DataZapisu} " +
+        $"{(OcenaKoncowa is null ? "brak" : OcenaKoncowa)} {CzyAktywny}";
 }
